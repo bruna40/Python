@@ -1,5 +1,6 @@
 from sklearn.svm import LinearSVC
 from sklearn.metrics import accuracy_score
+from functions import formatacao_texto
 
 porco1 = [0, 1, 0]
 porco2 = [0, 1, 1]
@@ -32,11 +33,6 @@ teste_x = model.predict(testes_x)
 treino_y = [0, 1, 1]
 
 taxa_de_acerto = accuracy_score(treino_y, teste_x)
-
-
-def formatacao_texto(texto):
-    text = 'Taxa de acerto do algoritmo: {:.2f}%'.format(texto * 100)
-    return text
 
 
 print(formatacao_texto(taxa_de_acerto))
